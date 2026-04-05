@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/* Chat container */
+.chat-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Chat box */
+#chat-box {
+  height: 420px;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Messages */
+.message {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 12px;
+  max-width: 75%;
+  line-height: 1.5;
+
+  /* 🔥 FIX SPACING ISSUE */
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.user {
+  background: #22c55e;
+  margin-left: auto;
+}
+
+.bot {
+  background: #1e293b;
+  white-space: pre-wrap;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+/* Button */
+button {
+  margin-left: 5px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Modern marquee */
+.marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #22c55e;
+  overflow: hidden;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px 0;
+  font-weight: bold;
+  color: black;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
